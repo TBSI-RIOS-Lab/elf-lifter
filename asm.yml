@@ -1,0 +1,423 @@
+LUI:
+  - MOV
+LB:
+  - LOAD
+LH:
+  - LOAD
+LW:
+  - LOAD
+LBU: 
+  - LOAD
+LHU:
+  - LOAD
+SB:
+  - STORE
+SH:
+  - STORE
+SW:
+  - STORE
+AUIPC:
+  - BRANCH
+JAL:
+  - JUMP
+JALR:
+  - JUMP
+BEQ:  
+  - COMPARE
+  - BRANCH
+BNE:
+  - COMPARE
+  - BRANCH
+BLT:
+  - COMPARE
+  - BRANCH
+BGE:
+  - COMPARE
+  - BRANCH
+BLTU:
+  - COMPARE
+  - BRANCH
+BGEU:
+  - COMPARE
+  - BRANCH
+ADDI:
+  - ADD
+SLTI:
+  - COMPARE
+SLTIU:
+  - COMPARE
+XORI:
+  - XOR
+ORI:
+  - OR
+OR:
+  - OR
+ANDI:
+  - AND
+AND:
+  - AND
+SLLI:
+  - SHIFT
+SRLI:
+  - SHIFT
+SRAI:
+  - SHIFT
+ADD:
+  - ADD
+SUB:
+  - SUB
+SLL:
+  - SHIFT
+SLT:
+  - COMPARE
+SLTU:
+  - COMPARE
+XOR:
+  - XOR
+SRA:
+  - SHIFT
+SRL:
+  - SHIFT
+FENCE:  
+ECALL:
+  - EXCEPTION
+EBREAK:
+  - EXCEPTION
+LWU:
+  - LOAD
+LD:
+  - LOAD
+SD:
+  - STORE
+ADDIW:
+  - ADD
+SLLIW:
+  - SHIFT
+SRLIW:
+  - SHIFT
+SRAIW:
+  - SHIFT
+ADDW:
+  - ADD
+SUBW:
+  - SUB
+SLLW:
+  - SHIFT
+SRLW:
+  - SHIFT
+SRAW:
+  - SHIFT
+FENCE.I: 
+CSRRW:
+CSRRS:
+CSRRC:
+CSRRWI:
+CSRRSI:
+CSRRCI:
+MUL:
+  - MUL
+MULH:
+  - MUL
+MULHSU:
+  - MUL
+MULHU:
+  - MUL
+DIV:
+  - DIV
+DIVU:
+  - DIV
+REM:
+  - REMAINDER
+REMU:
+  - REMAINDER
+MULW:
+  - MUL
+DIVW:
+  - DIV
+DIVUW:
+  - DIV
+REMW:
+  - REMAINDER
+REMUW:
+  - REMAINDER
+LR.W:
+  - LOAD
+SC.W:
+  - STORE
+AMOSWAP.W:
+  - LOAD: 1
+  - SWAP: 2
+  - STORE: 1
+AMOADD.W:
+  - LOAD: 1
+  - ADD: 2
+  - STORE: 1
+AMOXOR.W:
+  - LOAD: 1
+  - XOR: 2
+  - STORE: 1
+AMOAND.W:
+  - LOAD: 1
+  - AND: 2
+  - STORE: 1
+AMOOR.W:
+  - LOAD: 1
+  - OR: 2
+  - STORE: 1
+AMOMIN.W:
+  - LOAD: 1
+  - MIN: 2
+  - STORE: 1
+AMOMAX.W:
+  - LOAD: 1
+  - MAX: 2
+  - STORE: 1
+AMOMINU.W:
+  - LOAD: 1
+  - MIN: 2
+  - STORE: 1
+AMOMAXU.W:
+  - LOAD: 1
+  - MAX: 2
+  - STORE: 1
+LR.D:
+  - LOAD
+SC.D:
+  - LOAD
+AMOSWAP.D:
+  - LOAD: 1
+AMOADD.D:
+  - LOAD: 1
+  - ADD: 2
+  - STORE: 1
+AMOXOR.D:
+  - LOAD: 1
+  - XOR: 2
+  - STORE: 1
+AMOAND.D:
+  - LOAD: 1
+  - AND: 2
+  - STORE: 1
+AMOOR.D:
+  - LOAD: 1
+  - OR: 2
+  - STORE: 1
+AMOMIN.D:
+  - LOAD: 1
+  - MIN: 2
+  - STORE: 1
+AMOMAX.D:
+  - LOAD: 1
+  - MAX: 2
+  - STORE: 1
+AMOMINU.D:
+  - LOAD: 1
+  - MIN: 2
+  - STORE: 1
+AMOMAXU.D:
+  - LOAD: 1
+  - MAX: 2
+  - STORE: 1
+FLW:
+  - LOAD
+FCVT.L.S:
+  - CONVERT
+FCVT.LU.S:
+  - CONVERT
+FCVT.S.L:
+  - CONVERT
+FCVT.S.LU:
+  - CONVERT
+FSW:
+  - STORE
+FMADD.S:
+  - MUL: 
+    - 1
+    - 2
+  - ADD: 3
+FMSUB.S:
+  - MUL
+    - 1
+    - 2
+  - SUB: 3
+FNMSUB.S:
+  - MUL
+FNMADD.S:
+  - MUL
+FADD.S:
+  - ADD
+FSUB.S:
+  - SUB
+FMUL.S:
+  - MUL
+FDIV.S:
+  - DIV
+FSQRT.S:
+FSGNJ.S:
+FSGNJN.S:
+FSGNJX.S:
+FMIN.S:
+  - MIN
+FMAX.S:
+  - MAX
+FCVT.W.S:
+  - CONVERT
+FCVT.WU.S:
+  - CONVERT
+FMV.X.W:
+FEQ.S:
+  - COMPARE
+FLT.S:
+  - COMPARE
+FLE.S:
+  - COMPARE
+CLASS:
+FCVT.S.W:
+  - CONVERT
+FCVT.S.WU:
+  - CONVERT
+FMV.W.X:
+FLD:
+  - LOAD
+FCVT.L.D:
+  - CONVERT
+FCVT.LU.D:
+  - CONVERT
+FMV.X.D:
+FCVT.D.L:
+  - CONVERT
+FCVT.D.LU:
+  - CONVERT
+FMV.D.X:
+FSD:
+  - STORE
+FMADD.D:
+  - MUL: 
+    - 1
+    - 2
+  - ADD: 3
+FMSUB.D:
+  - MUL: 
+    - 1
+    - 2
+  - SUB: 3
+FNMSUB.D:
+  - MUL: 
+    - 1
+    - 2
+  - NEG
+  - SUB: 3
+FNMADD.D:
+  - MUL: 
+    - 1
+    - 2
+  - NEG
+  - ADD: 3
+FADD.D:
+  - ADD
+FSUB.D:
+  - SUB
+FMUL.D:
+  - MUL
+FDIV.D:
+  - DIV
+FSQRT.D:
+FSGNJ.D:
+FSGNJN.D:
+FSGNJX.D:
+FMIN.D:
+  - MIN 
+FMAX.D:
+  - MAX
+FCVT.S.D:
+  - CONVERT
+FCVT.D.S:
+  - CONVERT
+FEQ.D:
+  - COMPARE
+FLT.D:
+  - COMPARE
+FLE.D:
+  - COMPARE
+FCLASS.D:
+FCVT.W.D:
+  - CONVERT
+FCVT.WU.D:
+  - CONVERT
+FCVT.D.W:
+  - CONVERT
+FCVT.D.WU:
+  - CONVERT
+FLQ:
+  - LOAD
+FCVT.L.Q:
+  - CONVERT
+FCVT.LU.Q:
+  - CONVERT
+FCVT.Q.L:
+  - CONVERT
+FCVT.Q.LU:
+  - CONVERT
+FSQ:
+  - STORE
+FMADD.Q:
+  - MUL:
+    - 1
+    - 2
+  - ADD: 3
+FMSUB.Q:
+  - MUL:
+    - 1
+    - 2
+  - SUB: 3
+FNMSUB.Q:
+  - MUL:
+    - 1
+    - 2
+  - NEG
+  - SUB: 3
+FNMADD.Q:
+  - MUL:
+    - 1
+    - 2
+  - NEG
+  - ADD: 3
+FADD.Q:
+  - ADD
+FSUB.Q:
+  - SUB
+FMUL.Q:
+  - MUL
+FDIV.Q:
+  - DIV
+FSQRT.Q:
+FSGNJ.Q:
+FSGNJN.Q:
+FSGNJX.Q:
+FMIN.Q:
+  - MIN
+FMAX.Q:
+  - MAX
+FCVT.S.Q:
+  - CONVERT
+FCVT.Q.S:
+  - CONVERT
+FCVT.D.Q:
+  - CONVERT
+FCVT.Q.D:
+  - CONVERT
+FEQ.Q:
+  - COMPARE
+FLT.Q:
+  - COMPARE
+FLE.Q:
+  - COMPARE
+FCLASS.Q:
+FCVT.W.Q:
+  - CONVERT
+FCVT.WU.Q:
+  - CONVERT
+FCVT.Q.W:
+  - CONVERT
+FCVT.Q.WU:
+  - CONVERT

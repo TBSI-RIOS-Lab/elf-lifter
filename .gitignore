@@ -1,0 +1,6 @@
+build
+*.swp
+*~
+test/mtest
+.vscode/
+.idea/
