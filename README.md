@@ -4,14 +4,9 @@ This tool statically (AOT) translates (or raises) binaries to LLVM IR.
 
 ## Building as part of the LLVM tree
 
-1. On Linux and OS X build from a command prompt such as a bash shell. On Windows build from an `x64 Native Tools Command Prompt`. See [LLVM's Visual Studio guide](https://llvm.org/docs/GettingStartedVS.html).
-
-2. Clone the LLVM and mctoll git repositories
-
 ```sh
 cd llvm-project && git clone https://github.com/TBSI-RIOS-Lab/elf-lifter llvm/tools/elf-lifter
 
-```sh
 mkdir build && cd build
 cmake -G "Ninja" -DLLVM_TARGETS_TO_BUILD="X86;ARM" -DLLVM_ENABLE_PROJECTS="clang;lld" -DLLVM_ENABLE_ASSERTIONS=true -DCMAKE_BUILD_TYPE=Release ../llvm
 ninja 
@@ -19,6 +14,10 @@ ninja
 
 
 # Usage
+
+```sh
+llvm-mctoll <ELF>
+```
 
 | Command | Description |
 | --- | --- |
